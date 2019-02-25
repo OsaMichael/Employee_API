@@ -93,3 +93,5 @@ c:\users\michael\documents\visual studio 2015\Projects\EmployeeService\obj\Debug
 c:\users\michael\documents\visual studio 2015\Projects\EmployeeService\bin\System.Web.Cors.dll
 c:\users\michael\documents\visual studio 2015\Projects\EmployeeService\bin\System.Web.Http.Cors.dll
 c:\users\michael\documents\visual studio 2015\Projects\EmployeeService\bin\System.Web.Http.Cors.xml
+C:\Users\Michael\Documents\Visual Studio 2015\Projects\EmployeeService\bin\WebApiContrib.Formatting.Jsonp.dll
+C:\Users\Michael\Documents\Visual Studio 2015\Projects\EmployeeService\bin\WebApiContrib.Formatting.Jsonp.pdb

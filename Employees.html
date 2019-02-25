@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //assin variable to un orderlist id
+            var ulEmployees = $('#ulEmployees');
+            $('#btn').click(function () {
+                //when this is click it call the controller using ajax 
+              
+                $.ajax({
+                    type: 'GET',
+                    url: 'api/Employees',
+                    //dataType: 'jsonp',
+                    dataType: 'json',
+                    success: function (data) {                     
+                        //if it succeded we loop tru the employees object and display the ful name of empl.
+                        // but before that clear Underlist(ulEmployees) if any thiny inside by below
+                        ulEmployees.empty();
+                         //looping tru employees
+                        $.each(data, function (index, val) {
+                            //to loop the index of the employee is pass and the val. of the employee itself.
+                            var fullName = val.FirstName + ' ' + val.LastName;
+                            // display the FULLNAME wth an un underlist (ulEmployees)
+                            // to append means to Attach the list of item
+                            ulEmployees.append('<li>' + fullName + '</li>')
+                        });
+
+                    }
+                });
+            });
+            // to clear the un orderlist
+            $('#btnClear').click(function () {
+                ulEmployees.empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="Get All Employees" />
+    <input id="btnClear" type="button" value="Clear" />
+    <ul id="ulEmployees"></ul>
+</body>
+</html>
